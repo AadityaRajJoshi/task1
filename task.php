@@ -5,18 +5,25 @@
 </head>
 <body>
 	<?php
-  $items = array( 'bike', 'car', 'bicycle', 'chair', 'desk', 'mobile', 'laptop', 'anything', 'bag' );
+  $items = array( 'bike', 'car', 'bicycle', 'chair', 'desk', 'mobile', 'laptop', 'anything', 'bag', 'glass', 'tea','adhggh', );
 
-  // foreach ($items as  $value) {
-  // 	echo "$value <br>";
-  // }
-?>
+	$len = count($items);
+
+  ?>
+
 <div class="wrapper">
-	<?php foreach ($items as $key => $value) {?>
-		<div class="items">
-		<div class="single-item"><?php echo $value?></div>
-	<?php  }?>
+	<?php for($x=0; $x<$len; $x=$x+2){ ?>
+	<div class="items">
+		<div class="single-item"><?php echo $items[$x]?></div>
+		<div class="single-item">
+			<?php if (isset($items[$x+1])){
+				echo $items[$x+1]; }?>
+			</div>
+	</div> <br> <?php }?>	
+  </div>
 
-</div>
+	
 </body>
+        
+      
 </html>
