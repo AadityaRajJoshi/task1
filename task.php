@@ -5,7 +5,7 @@
 </head>
 <body>
 	<?php
-  $items = array( 'bike', 'car', 'bicycle', 'chair', 'desk', 'mobile', 'laptop', 'anything', 'bag', 'glass', 'tea','adhggh', );
+  $items = array( 'bike', 'car', 'bicycle', 'sccoty', 'dasdsa' );
 
 	$len = count($items);
 
@@ -15,10 +15,12 @@
 	<?php for($x=0; $x<$len; $x=$x+2){ ?>
 	<div class="items">
 		<div class="single-item"><?php echo $items[$x]?></div>
-		<div class="single-item">
-			<?php if (isset($items[$x+1])){
-				echo $items[$x+1]; }?>
-			</div>
+		
+			<?php if (isset($items[$x+1])){?>
+				<div class="single-item">
+				<?php echo $items[$x+1]; ?>
+				</div>
+			<?php }?>
 	</div> <br> <?php }?>	
   </div>
 
